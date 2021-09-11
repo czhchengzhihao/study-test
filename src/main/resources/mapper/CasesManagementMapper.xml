@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.dao.CasesManagementDao">
+    <select id="queryAutomationList" resultType="com.study.pojo.CasesManagement">
+        select *
+        from cases_management
+    </select>
+
+    <select id="queryById" resultType="com.study.pojo.CasesManagement">
+        select *
+        from cases_management
+        where id = #{id}
+    </select>
+
+
+    <insert id="addAutomation" parameterType="com.study.pojo.CasesManagement">
+        INSERT INTO cases_management (moduleName, interfaceName, apiURL, casesName, requestMethod, theGinseng)
+        VALUES (#{moduleName}, #{interfaceName}, #{apiURL}, #{casesName}, #{requestMethod}, #{theGinseng})
+    </insert>
+</mapper>

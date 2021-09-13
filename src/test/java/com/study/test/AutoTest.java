@@ -2,11 +2,10 @@ package com.study.test;
 
 
 import com.study.pojo.ResponseResult;
-import com.study.service.CasesManagementService;
 import com.study.service.ResponseResultService;
-import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.testng.annotations.Test;
 
 /**
  * @PackageName: com.construct.demo

@@ -61,7 +61,7 @@ public class PostDemo extends LoggerUtil {
         // 7.断言验证
         Assert.assertEquals(jsonResult.getString("message"), "登陆成功");
 
-     /*   ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         ResponseResultService responseResultServiceImpl = (ResponseResultService) context.getBean("ResponseResultService");
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String format = df.format(new Date());
@@ -72,7 +72,7 @@ public class PostDemo extends LoggerUtil {
         responseResult.setResponseData(jsonResult.getString("entity"));
         responseResult.setCreationTime(dates);
         int i = responseResultServiceImpl.addResponseResult(responseResult);
-        System.out.println(i);*/
+        System.out.println(i);
 
     }
 }

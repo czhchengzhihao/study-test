@@ -3,20 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.study.dao.CasesManagementDao">
-    <select id="queryAutomationList" resultType="com.study.pojo.CasesManagement">
+    <select id="queryCasesManagementList" resultType="com.study.model.CasesManagement">
         select *
         from cases_management
     </select>
 
-    <select id="queryById" resultType="com.study.pojo.CasesManagement">
+    <select id="queryCasesManagementById" resultType="com.study.model.CasesManagement">
         select *
         from cases_management
         where id = #{id}
     </select>
 
 
-    <insert id="addAutomation" parameterType="com.study.pojo.CasesManagement">
+<!--    <insert id="addAutomation" parameterType="com.study.model.CasesManagement">
         INSERT INTO cases_management (moduleName, interfaceName, apiURL, casesName, requestMethod, theGinseng)
         VALUES (#{moduleName}, #{interfaceName}, #{apiURL}, #{casesName}, #{requestMethod}, #{theGinseng})
-    </insert>
+    </insert>-->
 </mapper>

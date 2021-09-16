@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="com.study.pojo"/>
+        <package name="com.study.model"/>
     </typeAliases>
     <mappers>
         <mapper resource="mapper/CasesManagementMapper.xml"/>

@@ -1,8 +1,10 @@
-package com.study.pojo;
+package com.study.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.sql.Timestamp;
 
 /**
  * @PackageName: com.study.mybatisdemo
@@ -19,5 +21,7 @@ public class ResponseResult {
     private int id;
     private String success;
     private String message;
-    private String entity;
+    private String responseData;
+    private Timestamp creationTime;
+    private String remark;
 }

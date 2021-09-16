@@ -4,8 +4,19 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.study.dao.ResponseResultDao">
 
-    <insert id="addResponseResult" parameterType="com.study.pojo.ResponseResult">
-        INSERT INTO response_result (success, message, entity)
-        VALUES (#{success}, #{message}, #{entity})
+    <select id="queryResponseResultList" resultType="com.study.model.ResponseResult">
+        select *
+        from response_result
+    </select>
+
+    <select id="queryResponseResultById" resultType="com.study.model.ResponseResult">
+        select *
+        from response_result
+        where id = #{id}
+    </select>
+
+    <insert id="addResponseResult" parameterType="com.study.model.ResponseResult">
+        INSERT INTO response_result (success, message, responseData, creationTime, remark)
+        VALUES (#{success}, #{message}, #{responseData}, #{creationTime}, #{remark})
     </insert>
 </mapper>

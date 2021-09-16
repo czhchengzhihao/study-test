@@ -1,7 +1,7 @@
 package com.study.service.impl;
 
 import com.study.dao.CasesManagementDao;
-import com.study.pojo.CasesManagement;
+import com.study.model.CasesManagement;
 import com.study.service.CasesManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,19 +24,14 @@ public class CasesManagementServiceImpl implements CasesManagementService {
     @Autowired
     private CasesManagementDao casesManagementDao;
 
-    public void setCasesManagementDao(CasesManagementDao casesManagementDao) {
-        this.casesManagementDao = casesManagementDao;
+
+    @Override
+    public List<CasesManagement> queryCasesManagementList() {
+        return casesManagementDao.queryCasesManagementList();
     }
 
     @Override
-    public List<CasesManagement> queryAutomationList() {
-        return casesManagementDao.queryAutomationList();
+    public CasesManagement queryCasesManagementById(int id) {
+        return casesManagementDao.queryCasesManagementById(id);
     }
-
-    @Override
-    public CasesManagement queryById(int id) {
-        return casesManagementDao.queryById(id);
-    }
-
-
 }

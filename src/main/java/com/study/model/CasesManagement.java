@@ -1,10 +1,10 @@
-package com.study.pojo;
+package com.study.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * @PackageName: com.study.pojo
@@ -27,7 +27,7 @@ public class CasesManagement {
     private String theGinseng;
     private String expectedResults;
     private String actualResults;
-    private Date updateTime;
-    private Date creationTime;
-
+    private Timestamp updateTime;
+    private Timestamp creationTime;
+    private String remark;
 }

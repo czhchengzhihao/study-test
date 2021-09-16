@@ -1,7 +1,7 @@
 package com.study.dao;
 
 
-import com.study.pojo.CasesManagement;
+import com.study.model.CasesManagement;
 
 import java.util.List;
 
@@ -23,13 +23,11 @@ public interface CasesManagementDao {
     /**
      * 查询用例列表
      */
-    List<CasesManagement> queryAutomationList();
+    List<CasesManagement> queryCasesManagementList();
 
     /**
      * 根据id查询用例信息
      */
-
-    CasesManagement queryById(int id);
-
+    CasesManagement queryCasesManagementById(int id);
 
 }

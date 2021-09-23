@@ -9,4 +9,8 @@ package com.study.exceldemo;
  * @Version: v1.0
  */
 public class ExcelDataWrite {
+
+    public static void main(String[] args) {
+
+    }
 }

@@ -2,9 +2,12 @@ package com.study.test;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.study.connection.MybatisConnection;
+import com.study.dao.ResponseResultDao;
 import com.study.model.ResponseResult;
 import com.study.service.CasesManagementService;
 import com.study.service.ResponseResultService;
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.testng.annotations.Test;
@@ -54,4 +57,17 @@ public class AutoTest {
             System.out.println(s);
         }
     }
+
+    @Test
+    public void test() {
+        SqlSession sqlSession = MybatisConnection.getSqlSession();
+        ResponseResultDao mapper = sqlSession.getMapper(ResponseResultDao.class);
+        List<ResponseResult> responseResults = mapper.queryResponseResultList();
+        for (ResponseResult r : responseResults) {
+            System.out.println(r);
+            String s = JSONObject.toJSONString(r);
+            System.out.println(s);
+        }
+    }
+
 }

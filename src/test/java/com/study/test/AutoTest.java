@@ -58,6 +58,7 @@ public class AutoTest {
         }
     }
 
+    //直接使用mybatis进行数据库增删改查
     @Test
     public void test() {
         SqlSession sqlSession = MybatisConnection.getSqlSession();

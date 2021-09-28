@@ -37,27 +37,15 @@ public class HttpResponseUtil {
     private CloseableHttpResponse closeableHttpResponse;
     private CloseableHttpClient client;
 
-    /* **
-     * @return void
-     * @Author ChengZhiHao
-     * @Description //TODO admin 设置头信息公共类/POST
-     * @Date 14:33 2021/7/20
-     * @Param [headerKey, headerValue]
-     ***/
-    /*public void httpSetHeader(String headerKey, String headerValue, HttpPost post) {
+
+/*    public void httpSetHeader(String headerKey, String headerValue, HttpPost post) {
         post.setHeader(headerKey, headerValue);
         log.info("头信息(key:value):" + headerKey + ":" + headerValue);
         Reporter.log("头信息(key:value):" + headerKey + ":" + headerValue, true);
     }*/
 
-    /**
-     * @return void
-     * @Author ChengZhiHao
-     * @Description //TODO admin 设置头信息公共类/GET
-     * @Date 14:33 2021/7/20
-     * @Param [headerKey, headerValue]
-     **/
-  /*  public void httpSetHeader(String headerKey, String headerValue, HttpGet get) {
+
+/*    public void httpSetHeader(String headerKey, String headerValue, HttpGet get) {
         get.setHeader(headerKey, headerValue);
         log.info("头信息(key:value):" + headerKey + ":" + headerValue);
         Reporter.log("头信息(key:value):" + headerKey + ":" + headerValue, true);
@@ -65,12 +53,13 @@ public class HttpResponseUtil {
 
 
     /**
-     * @return
+     * @return void
      * @Author ChengZhiHao
-     * @Description //TODO admin 请求头信息默认设置
-     * @Date 15:31 2021/7/20
-     * @Param
+     * @Description //TODO admin
+     * @Date 14:12 2021/9/24
+     * @Param [get]
      **/
+
     public void httpSetHeader(HttpGet get) {
         get.setHeader("Content-Type", "application/json");
     }

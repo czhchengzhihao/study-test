@@ -100,7 +100,7 @@ public class HttpPostUtil {
      **/
     public static JSONObject httpPostFormData(String testUrl, String interfaceAddress, String data) {
         HttpPost post = new HttpPost(BUNDLE.getString(testUrl) + BUNDLE.getString(interfaceAddress));
-       HttpResponseUtil httpClientResponseUtil = new HttpResponseUtil();
+        HttpResponseUtil httpClientResponseUtil = new HttpResponseUtil();
         httpClientResponseUtil.httpSetHeader(post);
         JSONObject parameter = JSONObject.parseObject(data);
         List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
@@ -140,7 +140,7 @@ public class HttpPostUtil {
                 }
             }
             HttpPost post = new HttpPost(build.build());
-           HttpResponseUtil httpClientResponseUtil = new HttpResponseUtil();
+            HttpResponseUtil httpClientResponseUtil = new HttpResponseUtil();
             httpClientResponseUtil.httpSetHeader(post);
             return httpClientResponseUtil.requestExecution(testUrl, interfaceAddress, post);
         } catch (URISyntaxException e) {
